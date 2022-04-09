@@ -12,7 +12,7 @@ router.get('/notes', function (req, res) {
 
 
 // post request
-router.get('/notes', (req, res) => {
+router.get('/notes', function (req, res)  {
     saveData
     .retrieveNotes()
     .then(notes => res.json(notes))
