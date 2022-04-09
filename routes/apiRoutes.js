@@ -1,7 +1,6 @@
 const router = require('express').Router();
 const saveData = require('../db/saveData');
 
-
 // get request
 router.get('/notes', function (req, res) {
     saveData
@@ -9,7 +8,6 @@ router.get('/notes', function (req, res) {
     .then(notes => res.json(notes))
     .catch(err => res.status(500).json(err));
   });
-
 
 
 
