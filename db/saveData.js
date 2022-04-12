@@ -5,6 +5,7 @@ const util = require("util")
 //     console.log(data);
 //   });
 const readsFile = util.promisify(fs.readFile)
+const writeFile = util.promisify(fs.writeFile)
 
 class Notes {
    retrieveNotes() {
@@ -17,8 +18,11 @@ class Notes {
     //   return tempData
   }
 
-  async saveNotes() {
-      console.log("Notesaveisalive")
+  async saveNotes(title,text) {
+      console.log (title)
+      console.log (text)
+      const tempObject = {'title':title,'text':text}
+      return writeFile ('./db/db.json',tempObject)
   }
 }
 const newClass = new Notes();
