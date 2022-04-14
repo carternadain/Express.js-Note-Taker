@@ -6,10 +6,14 @@ const util = require("util")
 //   });
 const readsFile = util.promisify(fs.readFile)
 const writeFile = util.promisify(fs.writeFile)
+const currentNotes = readsFile
 
 class Notes {
-   retrieveNotes() {
+   currentNotes() {
        return readsFile ('./db/db.json','utf8')
+      //  currentNotes ();{
+      //  return readsFile ('./db/db.json', 'utf8')
+      //  }
     //   let tempData = {}
     //  fs.readFile('./db/db.json', 'utf8',(err, data) => {
     //     if (err) throw err;
