@@ -7,7 +7,6 @@ router.get('/notes', function (req, res) {
     saveData
     .retrieveNotes()
     .then(notes => {
-      console.log (notes)
      return res.json(notes)
     })
 

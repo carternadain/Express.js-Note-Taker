@@ -13,10 +13,20 @@ class Notes {
   }
 
   async saveNotes(title,text) {
+      let tempData = [] 
+       this.retrieveNotes() .then ((data)=>{
+           console.log (JSON.parse(data))
+           const tempObject = {'title':title,'text':text}
+           tempData = JSON.parse (data)
+           console.log ('line17')
+           console.log (tempData)
+          tempData.push(tempObject)
+          console.log ('line23')
+          console.log(tempData)
+          writeFileAsync ('./db/db.json',JSON.stringify(tempData))
+       })
       console.log (title)
       console.log (text)
-      const tempObject = {'title':title,'text':text}
-      return writeFileAsync ('./db/db.json',tempObject)
   }
 
 }
