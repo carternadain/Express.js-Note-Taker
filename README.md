@@ -5,6 +5,8 @@
 This repository encapsulates code created generate and save notes 
 
 
+# Technology 
+`Javascript` , `sql` , `Node` , `Npm packages`,  `Express.js` , `Html` , ` CSS`
 
 # Screenshot of application in use
 ![Screen Shot of the App in use](/assets/images/front-page.png)
